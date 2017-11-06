@@ -1,0 +1,42 @@
+{{WARNING}}
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.bcsdk12.bcsdwx" version="{{VERSION}}" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BCSD Wx</name>
+    <description>
+        The official BCSD weather app! Developed by students, using school-generated data and information pulled from the National Weather Service.
+        
+        Visit the online version at: http://www.bcsdk12.org/weather/
+    </description>
+    <author email="" href="http://www.bcsdk12.org">
+        Beekmantown Central School District
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="http://earthscience.bcsdk12.org/wxapp_data/*" />
+    <access origin="http://*.googleapis.com/*" />
+    <access origin="http://*.gstatic.com/*" />
+    <access launch-external="yes" origin="http://*" />
+    <access launch-external="yes" origin="https://*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/android/mdpi.png" />
+        <icon density="mdpi" src="res/android/mdpi.png" />
+        <icon density="hdpi" src="res/android/hdpi.png" />
+        <icon density="xhdpi" src="res/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/android/xxxhdpi.png" />
+        <preference name="StatusBarBackgroundColor" value="#B71C1C" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="StatusBarBackgroundColor" value="#C62828" />
+        <preference name="StatusBarOverlaysWebView" value="true" />
+        <preference name="StatusBarStyle" value="lightcontent" />
+        <preference name="DisallowOverscroll" value="true" />
+    </platform>
+    <preference name="xwalkVersion" value="xwalk_core_library_beta:18+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+</widget>

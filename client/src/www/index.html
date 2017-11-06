@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BCSD Weather</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="./icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="./icons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="./icons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="./icons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="./icons/manifest.json">
+	<link rel="shortcut icon" href="./icons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="BCSD Weather">
+	<meta name="application-name" content="BCSD Weather">
+	<meta name="msapplication-TileColor" content="#c62828">
+	<meta name="msapplication-TileImage" content="./icons/mstile-144x144.png">
+	<meta name="msapplication-config" content="./icons/browserconfig.xml">
+	<meta name="theme-color" content="#c62828">
+	<link rel="stylesheet" type="text/css" href="./css/style.min.css">
+</head>
+<body>
+	<div id="page_home" class="page page_open">
+		<div class="loader_cont">
+			<div class="loader"></div>
+		</div>
+		
+		<div class="content content_hide">
+			<div id="wc_cond">
+				<div id="wc_bg"></div>
+				<div id="wc_temp"></div>
+				<div id="wc_cond_text"></div>
+				<div id="wc_stats" class="wc_card">
+					<div class="wc_card_stats">
+						<div>
+							<div class="stat_desc">
+								<div class="stat_icon icon-arrow-up-bold"></div>
+								<div class="stat_cell">HIGH</div>
+							</div>
+							<div id="t_high"></div>
+						</div>
+						<div>
+							<div class="stat_desc">
+								<div class="stat_icon icon-arrow-down-bold"></div>
+								<div class="stat_cell">LOW</div>
+							</div>
+							<div id="t_low"></div>
+						</div>
+						<div>
+							<div class="stat_desc">
+								<div class="stat_icon icon-hum"></div>
+								<div class="stat_cell">HUM.</div>
+							</div>
+							<div id="t_hum"></div>
+						</div>
+					</div>
+					<div id="wc_wind">
+						<div id="wc_wind_circle"></div>
+						<div id="t_wind"></div>
+						<div id="wc_wind_unit"></div>
+					</div>
+					<div id="wc_more">
+						RADAR <i class="icon-arrow-right"></i>
+					</div>
+				</div>
+				<div id="wc_timestamp"></div>
+			</div>
+			
+			<div id="wc_card_cont_for" class="wc_card_cont"></div>
+		</div>
+		
+		<div class="navbar">
+			<div class="navbar_bg" style="opacity:0"></div>
+			<div class="drawer_toggle navbar_button mobile_show">
+				<div class="navbar_icon icon-navbar_menu"></div>
+			</div>
+			<div class="navbar_icon icon-navbar_logo mobile_hide"></div>
+			<div class="navbar_text navbar_text_long">BCSD Weather</div>
+			<div class="navbar_text navbar_text_short">BCSD Wx</div>
+			<div class="navbar_tabstrip mobile_hide">
+				<div class="navbar_tab pagelink pagelink_home">HOME</div>
+				<div class="navbar_tab pagelink pagelink_settings">SETTINGS</div>
+			</div>
+			<div class="navbar_right">
+				<div class="navbar_button navbar_photo">
+					<a download><div class="navbar_icon icon-navbar_photo"></div></a>
+				</div>
+				
+				<div class="navbar_button navbar_refresh">
+					<div class="navbar_icon icon-navbar_refresh"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="page_forecast" class="page page_pop">
+		<div class="content">
+			<div id="for_day">
+				<div class="for_time">DAY</div>
+				<div class="for_main">
+					<div class="for_icon"></div>
+					<div class="for_desc"><div>
+						<p class="for_desc_header"></p>
+						<p class="for_desc_full"></p>
+					</div></div>
+				</div>
+				<div class="for_card_cont">
+					<div class="for_card for_card_high">
+						<div class="stat_desc">
+							<div class="stat_icon icon-arrow-up-bold"></div>
+							<div class="stat_cell">HIGH</div>
+						</div>
+						<div class="for_high"></div>
+					</div>
+					<div class="for_card for_card_low">
+						<div class="stat_desc">
+							<div class="stat_icon icon-arrow-down-bold"></div>
+							<div class="stat_cell">LOW</div>
+						</div>
+						<div class="for_low"></div>
+					</div>
+					<div class="for_card">
+						<div class="stat_desc">
+							<div class="stat_icon icon-rainy"></div>
+							<div class="stat_cell">RAIN</div>
+						</div>
+						<div class="for_rain"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="for_night">
+				<div class="for_time">NIGHT</div>
+				<div class="for_main">
+					<div class="for_icon"></div>
+					<div class="for_desc"><div>
+						<p class="for_desc_header"></p>
+						<p class="for_desc_full"></p>
+					</div></div>
+				</div>
+				<div class="for_card_cont">
+					<div class="for_card">
+						<div class="stat_desc">
+							<div class="stat_icon icon-rainy"></div>
+							<div class="stat_cell">RAIN</div>
+						</div>
+						<div class="for_rain"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar">
+			<div class="navbar_bg"></div>
+			<div class="navbar_button navbar_back">
+				<div class="navbar_icon icon-navbar_back"></div>
+			</div>
+			<div class="navbar_text"></div>
+		</div>
+	</div>
+	
+	<div id="page_radar" class="page page_pop">
+		<div id="map_radar"></div>
+		<div id="map_radar_nws"></div>
+		<div id="map_radar_legend"></div>
+		<div class="navbar">
+			<div class="navbar_bg navbar_bg_radar"></div>
+			<div class="navbar_button navbar_back">
+				<div class="navbar_icon icon-navbar_back"></div>
+			</div>
+			<div class="navbar_text">Radar</div>
+		</div>
+	</div>
+
+	<div id="page_error" class="page">
+		<div class="content">
+			<div id="error_cont">
+				<img src="./img/alert.svg" style="margin-bottom:2rem">
+				<p>OOPS! SOMETHING WENT WRONG.</p><br>
+				Refresh the page to try again.
+			</div>
+		</div>
+		<div class="navbar">
+			<div class="navbar_bg"></div>
+			<div class="navbar_icon icon-navbar_logo"></div>
+			<div class="navbar_text navbar_text_long">BCSD Weather</div>
+			<div class="navbar_text navbar_text_short">BCSD Wx</div>
+			<div class="navbar_right">
+				<div class="navbar_button navbar_refresh">
+					<div class="navbar_icon icon-navbar_refresh"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="page_settings" class="page">
+		<div class="content">
+			<div class="for_time page_pad_top">SETTINGS</div>
+			<ul class="checkbox_list">
+				<li class="checkbox_item">
+					<label class="checkbox_label">
+						<input type="checkbox" class="setting" id="setting_metric">
+						Use metric system
+					</label>
+				</li>
+				<li class="checkbox_item">
+					<label class="checkbox_label">
+						<input type="checkbox" class="setting" id="setting_autorefresh">
+						Auto-refresh
+					</label>
+				</li>
+				<li class="checkbox_item">
+					<label class="checkbox_label">
+						<input type="checkbox" class="setting" id="setting_darktheme">
+						Dark Theme
+					</label>
+				</li>
+			</ul>
+			<div class="for_time">ABOUT</div>
+			<div class="about_text">
+				Developed by<br>
+				<p class="about_highlight">Joseph Judge</p>
+				<a href="http://jojudge.com">jojudge.com</a>
+			</div>
+			<div class="about_text">
+				Data obtained from<br>
+				<p class="about_highlight">National Weather Service</p>
+				<a href="http://www.weather.gov">www.weather.gov</a>
+				<p class="about_highlight">Beekmantown High School</p>
+				<a href="http://www.bcsdk12.org">www.bcsdk12.org</a>
+			</div>
+			<div class="about_text" id="ad_section"></div>
+			<div class="about_text">
+				<p class="about_highlight">Version <span id="version"></span></p>
+				Build <span id="build"></span>
+			</div>
+		</div>
+		<div class="navbar">
+			<div class="navbar_bg"></div>
+			<div class="drawer_toggle navbar_button mobile_show">
+				<div class="navbar_icon icon-navbar_menu"></div>
+			</div>
+			<div class="navbar_icon icon-navbar_logo mobile_hide"></div>
+			<div class="navbar_text navbar_text_long">BCSD Weather</div>
+			<div class="navbar_text navbar_text_short">BCSD Wx</div>
+			<div class="navbar_tabstrip mobile_hide">
+				<div class="navbar_tab pagelink pagelink_home">HOME</div>
+				<div class="navbar_tab pagelink pagelink_settings">SETTINGS</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="page_update" class="page">
+		<div class="content">
+			<div id="update_cont">
+				<img src="./img/alert.svg" style="margin-bottom:2rem">
+				<p>OOPS! UPDATE REQUIRED.</p><br>
+				This app requires an update to function properly.<br>
+				<br>
+				<span id="update_link"></span>
+			</div>
+		</div>
+		<div class="navbar">
+			<div class="navbar_bg"></div>
+			<div class="navbar_icon icon-navbar_logo"></div>
+			<div class="navbar_text navbar_text_long">BCSD Weather</div>
+			<div class="navbar_text navbar_text_short">BCSD Wx</div>
+		</div>
+	</div>
+
+	<div id="page_photo" class="page page_pop">
+		<div class="content">
+			<span id="photo_cont" style="display:inline-block">
+				<img src="./img/bg/clear.jpg">
+			</span>
+		</div>
+		<div class="navbar">
+			<div class="navbar_bg navbar_bg_radar"></div>
+			<div class="navbar_button navbar_back">
+				<div class="navbar_icon icon-navbar_back"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="drawer_main" class="drawer_cont">
+		<div class="drawer_bg"></div>
+		<div class="drawer">
+			<div class="pagelink_home drawer_item pagelink">
+				<div class="drawer_item_icon icon-home"></div>
+				<div class="drawer_item_text">Home</div>
+			</div>
+			<div class="pagelink_settings pagelink drawer_item">
+				<div class="drawer_item_icon icon-settings"></div>
+				<div class="drawer_item_text">Settings</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="splashscreen"></div>
+<!-- 	<script src="./js/lib/jquery-2.11-custom.min.js"></script>
+	<script src="./js/lib/jquery.mobile.custom.min.js"></script>
+	<script src="./js/lib/perfect-scrollbar.jquery.min.js"></script>
+	<script src="./js/lib/fastclick.min.js"></script> -->
+
+	<script src="./js/script.min.js"></script>
+</body>
+</html>

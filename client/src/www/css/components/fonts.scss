@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/roboto-bold-webfont.eot');
+    src: url('../font/roboto/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('../font/roboto/roboto-bold-webfont.woff') format('woff'),
+         url('../font/roboto/roboto-bold-webfont.ttf') format('truetype'),
+         url('../font/roboto/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/roboto-thin-webfont.eot');
+    src: url('../font/roboto/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto/roboto-thin-webfont.woff2') format('woff2'),
+         url('../font/roboto/roboto-thin-webfont.woff') format('woff'),
+         url('../font/roboto/roboto-thin-webfont.ttf') format('truetype'),
+         url('../font/roboto/roboto-thin-webfont.svg#robotolight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/roboto-regular-webfont.eot');
+    src: url('../font/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto/roboto-regular-webfont.woff') format('woff'),
+         url('../font/roboto/roboto-regular-webfont.ttf') format('truetype'),
+         url('../font/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// -------------
+
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../font/roboto_condensed/robotocondensed-bold-webfont.eot');
+    src: url('../font/roboto_condensed/robotocondensed-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto_condensed/robotocondensed-bold-webfont.woff2') format('woff2'),
+         url('../font/roboto_condensed/robotocondensed-bold-webfont.woff') format('woff'),
+         url('../font/roboto_condensed/robotocondensed-bold-webfont.ttf') format('truetype'),
+         url('../font/roboto_condensed/robotocondensed-bold-webfont.svg#roboto_condensedbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../font/roboto_condensed/robotocondensed-light-webfont.eot');
+    src: url('../font/roboto_condensed/robotocondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto_condensed/robotocondensed-light-webfont.woff2') format('woff2'),
+         url('../font/roboto_condensed/robotocondensed-light-webfont.woff') format('woff'),
+         url('../font/roboto_condensed/robotocondensed-light-webfont.ttf') format('truetype'),
+         url('../font/roboto_condensed/robotocondensed-light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../font/roboto_condensed/robotocondensed-regular-webfont.eot');
+    src: url('../font/roboto_condensed/robotocondensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto_condensed/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto_condensed/robotocondensed-regular-webfont.woff') format('woff'),
+         url('../font/roboto_condensed/robotocondensed-regular-webfont.ttf') format('truetype'),
+         url('../font/roboto_condensed/robotocondensed-regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../font/icomoon/icomoon.eot?ev1ksd');
+    src:url('../font/icomoon/icomoon.eot?ev1ksd#iefix') format('embedded-opentype'),
+        url('../font/icomoon/icomoon.ttf?ev1ksd') format('truetype'),
+        url('../font/icomoon/icomoon.woff?ev1ksd') format('woff'),
+        url('../font/icomoon/icomoon.svg?ev1ksd#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-navbar_photo:before {
+    content: "\e903";
+}
+.icon-cloudy:before {
+    content: "\e800";
+}
+.icon-fog:before {
+    content: "\e801";
+}
+.icon-hail:before {
+    content: "\e802";
+}
+.icon-lightning:before {
+    content: "\e803";
+}
+.icon-night:before {
+    content: "\e804";
+}
+.icon-partlycloudy:before {
+    content: "\e805";
+}
+.icon-partlycloudy-night:before {
+    content: "\e806";
+}
+.icon-rainy:before {
+    content: "\e807";
+}
+.icon-snowy:before {
+    content: "\e808";
+}
+.icon-sunny:before {
+    content: "\e809";
+}
+.icon-navbar_logo:before {
+    content: "\e80a";
+}
+.icon-navbar_back:before {
+    content: "\e80b";
+}
+.icon-navbar_refresh:before {
+    content: "\e80c";
+}
+.icon-arrow-down-bold:before {
+    content: "\e80d";
+}
+.icon-arrow-up-bold:before {
+    content: "\e80e";
+}
+.icon-hum:before {
+    content: "\e80f";
+}
+.icon-arrow-right:before {
+    content: "\e810";
+}
+.icon-home:before {
+    content: "\e900";
+}
+.icon-settings:before {
+    content: "\e901";
+}
+.icon-navbar_menu:before {
+    content: "\e902";
+}

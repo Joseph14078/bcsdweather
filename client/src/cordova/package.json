@@ -1,0 +1,17 @@
+{
+  "name": "com.bcsdk12.bcsdwx",
+  "version": "1.2.0",
+  "displayName": "BCSD Wx",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~6.3.0",
+    "cordova-plugin-whitelist": "1"
+  }
+}

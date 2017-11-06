@@ -1,0 +1,130 @@
+// Standard Colors
+
+$bg_color: #eee;
+$bg_color_card: #fff;
+$text_color: #000;
+$text_color_light: #666;
+
+$drawer_bg_color: #fff;
+$drawer_text_color: #000;
+$drawer_select_color: #C62828;
+
+// Dark Theme Colors
+
+$dark_bg_color: #2d2d2d;
+$dark_bg_color_card: #333333;
+$dark_text_color: #f9f9f9;
+$dark_text_color_light: #dedede;
+
+$dark_drawer_bg_color: #2d2d2d;
+$dark_drawer_text_color: #f9f9f9;
+$dark_drawer_select_color: #C62828;
+
+// Navbar Colors
+
+$navbar_bg_color: #c62828; 
+$navbar_text_color: #fff;
+
+// Icon Colors
+
+$color_sunny: 				#FFD600;
+$color_rainy: 				#607D8B;
+$color_partlycloudy: 		#1565C0;
+$color_cloudy: 				#607D8B;
+$color_night: 				#607D8B;
+$color_partlycloudy_night: 	#607D8B;
+$color_lightning: 			#607D8B;
+$color_snowy: 				#64B5F6;
+$color_hail:	 			#64B5F6;
+
+// ----------------------------------------------------------------------------
+
+.navbar_bg { background: $navbar_bg_color; }
+.navbar_text, .navbar_tab, .navbar_icon { color: $navbar_text_color; }
+
+// ----------------------------------------------------------------------------
+
+body:not(.dark) {
+	color: $text_color;
+
+	body, .page, .wc_card_cont, .loader:before, .loader:after,
+	input[type='checkbox']:after {
+		background-color: $bg_color;
+	}
+
+	.wc_card {
+		background-color: $bg_color_card;
+	}
+
+	.wc_card, .for_desc_header, .for_time, .for_card, #error_cont > p,
+	#update_cont > p {
+		color: $text_color_light;
+	}
+
+
+	.drawer {
+		background: $drawer_bg_color;
+		color: $drawer_text_color;
+	}
+
+	.drawer_item.pagelink_open {
+		color: $drawer_select_color !important;
+	}
+}
+
+body.dark {
+	color: $dark_text_color;
+	
+	body, .page, .wc_card_cont, .loader:before, .loader:after,
+	input[type='checkbox']:after {
+		background-color: $dark_bg_color;
+	}
+
+	.wc_card {
+		background-color: $dark_bg_color_card;
+	}
+
+	.wc_card, .for_desc_header, .for_time, .for_card, #error_cont > p,
+	#update_cont > p {
+		color: $dark_text_color_light;
+	}
+
+
+	.drawer {
+		background: $dark_drawer_bg_color;
+		color: $dark_drawer_text_color;
+	}
+
+	.drawer_item.pagelink_open {
+		color: $dark_drawer_select_color !important;
+	}
+}
+
+// ----------------------------------------------------------------------------
+
+
+.wc_card_icon {
+	&.icon-sunny				{ color: $color_sunny }
+	&.icon-rainy 				{ color: $color_rainy }
+	&.icon-partlycloudy 		{ color: $color_partlycloudy }
+	&.icon-cloudy 				{ color: $color_cloudy }
+	&.icon-night 				{ color: $color_night }
+	&.icon-partlycloudy-night 	{ color: $color_partlycloudy_night }
+	&.icon-lightning 			{ color: $color_lightning }
+	&.icon-snowy				{ color: $color_snowy }
+	&.icon-hail					{ color: $color_hail }
+}
+
+.for_icon {
+	&.icon-sunny				{ background: $color_sunny }
+	&.icon-rainy 				{ background: $color_rainy }
+	&.icon-partlycloudy 		{ background: $color_partlycloudy }
+	&.icon-cloudy 				{ background: $color_cloudy }
+	&.icon-night 				{ background: $color_night }
+	&.icon-partlycloudy-night 	{ background: $color_partlycloudy_night }
+	&.icon-lightning 			{ background: $color_lightning }
+	&.icon-snowy				{ background: $color_snowy }
+	&.icon-hail					{ background: $color_hail }
+}
+
+// ----------------------------------------------------------------------------

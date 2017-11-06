@@ -1,0 +1,6 @@
+{
+	"dir_output": "../client/build/www",
+	"loop_time": 300,
+	"bg_path": "./test.jpg",
+	"bg_expire": 9000
+}
