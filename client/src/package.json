@@ -1,6 +1,6 @@
 {
   "name": "bcsdweather",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Official BCSD Weather app.",
   "urlDataTest": "/",
   "urlDataBuild": "http://earthscience.bcsdk12.org/wxapp_data/",
